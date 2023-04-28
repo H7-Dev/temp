@@ -1,0 +1,11 @@
+
+@mixin cr($col: '', $colEnd:'', $row: '', $rowEnd:'', $maxWidth: 768px) {
+    grid-row-start: $row;grid-row-end: $rowEnd;
+    grid-column-start: $col;grid-column-end: $colEnd;
+
+        @media (max-width: 768px) {
+            grid-row-start: $row;grid-row-end: $rowEnd;
+            grid-column-start: $col;grid-column-end: $colEnd;
+        }
+}
+

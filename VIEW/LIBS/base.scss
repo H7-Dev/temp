@@ -1,0 +1,258 @@
+.animeTrans {
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.abaActive {
+    background-color: #c5c5c524 !important;
+
+    >svg {
+        fill: red !important;
+    }
+
+    >span.titulo {
+        color: red !important;
+    }
+
+    transition: background-color 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+    opacity: 1;
+
+    &:not(:hover) {
+        opacity: 0.8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #c5c5c524 !important;
+        background-color: #0000 !important;
+
+        >svg {
+            fill: lightcoral  !important;
+
+        }
+    >span.titulo {
+            color: lightcoral  !important;
+        }
+    }
+}
+
+.ocultar {
+    display: none !important;
+}
+
+.actvGrid {
+    display: grid !important;
+}
+
+.activeFlex {
+    display: flex !important;
+}
+
+.activeBloco {
+    display: block !important;
+}
+
+.selc {
+    background-color: red !important;
+}
+
+.selc2 {
+    background-color: cornflowerblue !important;
+}
+
+.selc3 {
+    border: 1.2px solid #1C6EA4 !important;
+}
+
+.selc3 {
+    border: 1.2px solid #1C6EA4 !important;
+}
+
+.selc4 {
+    background-color: aliceblue !important;
+    color: tomato !important;
+    border: 1.2px solid transparent !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+// #EBEEF5
+.overlayImg {
+    background-image:
+        linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+        url('./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg');
+    background-size: cover;
+    background-position-y: center;
+}
+
+.overlayImg2 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52) 4%, rgba(117, 19, 93, 0.85) 70%),
+        url(./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.overlayImg3 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52) 4%, rgba(83, 83, 73, 0.75) 70%),
+        url(./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.sombra-d01 {
+    -webkit-box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.31);
+    box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.31);
+}
+
+
+.txtOverFlowMult {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.clickSwipeArea {
+    background-color: #3535358f;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 98;
+}
+
+div.clickSwipeAreaTrans {
+    background-color: rgba(0, 0, 0, 0.301) !important;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 98;
+}
+
+.tituloLogo {
+    display: none;
+}
+
+.overlayImg {
+    background-image:
+        linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+        url('./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg');
+    background-size: cover;
+    background-position-y: center;
+}
+
+.overlayImg2 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52) 4%, rgba(117, 19, 93, 0.85) 70%),
+        url(./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.overlayImg3 {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52) 4%, rgba(83, 83, 73, 0.75) 70%),
+        url(./../../ASSETS/MIDIA/WALLPAPER/00.01--pexels-arthur-brognoli-2342505--.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.SELC-1 {
+    color: rgb(0, 60, 140) !important;
+    background-color: lightcoral !important;
+    border: 1px solid lightcoral !important;
+
+    svg {
+        fill: #003c8c !important;
+        stroke: #003c8c !important;
+    }
+}
+
+.SELC-2 {
+    color: #003c8c !important;
+    background-color: #f0808067 !important;
+    border: 1px solid #f0808067 !important;
+
+    svg {
+        fill: #003c8c !important;
+        stroke: #003c8c !important;
+    }
+}
+
+.SELC-3 {
+
+    font-weight: 700;
+    background-color: #f0808067 !important;
+    border: 0px solid #647dff !important;
+
+    span {
+        color: #003c8c !important;
+    }
+}
+
+.ACTIVE_painel-A1 {
+    display: grid !important;
+}
+
+.ACTIVE_painel-B1 {
+    display: grid !important;
+}
+
+.activeTextOverFlow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.actBorderBottom {
+    border-bottom: 2px solid slategray !important;
+}
+
+.actBorderT1 {
+    border-top: 2px solid slategray !important;
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+span.rippleElement {
+    position: absolute;
+    background: rgba(45, 45, 45, 0.500);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1.0s linear forwards;
+    // z-index: 101;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}

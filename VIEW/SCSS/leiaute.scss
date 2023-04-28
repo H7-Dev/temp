@@ -1,0 +1,44 @@
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // NOTE[id=nota-teste]
+}
+
+
+// * define o css raiz do html
+:root {
+    font-family: 'Segoe UI';
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // overflow: hidden;
+    touch-action: manipulation;
+
+    // ! REVIEW #L-001 Reduced Motion Media Query
+    // TODO ✔️ Questão resolvido e NÃO compreendida
+    // LINK https://alvarotrigo.com/blog/sticky-navbar/
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    background-color: red;
+    padding: 4px;
+    // background-image: linear-gradient(to bottom, #F7F7F7 2%, #ffffff 51%);
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+

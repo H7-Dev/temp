@@ -1,0 +1,202 @@
+// * cardStyA1
+@mixin cardStyA1($useDarkMode: true) {
+        background-color: #ffffff;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 260px;
+        min-width: 260px;
+        max-height: 320px;
+        min-height: 320px;
+        margin: 10px 15px;
+        overflow: hidden;
+        position: relative;
+        display: grid;
+
+        >.cardMedia {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+            }
+
+            input[type="checkbox"] {
+                // posicionamento
+                display: none;
+                position: absolute;
+                z-index: 2;
+                right: 10px;
+                top: 10px;
+                // dimencionamento
+                width: 20px;
+                height: 20px;
+
+                border-radius: 4px;
+
+                appearance: none; // Removendo a aparência padrão do checkbox
+                background-color: #ffffff96;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                overflow: hidden;
+
+                // Estilizando o indicador de seleção (marcador)
+                &::before {
+                    content: "\2714";
+                    font-size: 14px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: dodgerblue;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:checked::before {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    background-color: lighten(#CCC, 10%); // Clareando a cor de fundo
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 1px #007bff; // Adicionando uma sombra para indicar o foco
+                }
+
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        >.cardHeader {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+
+            >div {
+                flex-grow: 1;
+
+                >.titulo {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    @include textOverflowMult(1);
+                }
+
+                >.subtitulo {
+                    margin: 4px 0 0;
+                    font-size: 14px;
+                    color: #616161;
+                    @include textOverflowMult(1);
+                }
+            }
+        }
+
+        >.cardContent {
+            padding: 8px 16px;
+
+            >.supportingText {
+                margin: 0;
+                font-size: 14px;
+                color: #616161;
+                @include textOverflowMult(3);
+            }
+        }
+
+        >.cardActions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; // Define espaço entre os botões à esquerda e à direita
+            padding: 8px 16px;
+
+
+            >.leftActions {
+                display: flex; // Cria um flex container para os botões à esquerda
+
+                .action-anchor {
+                    margin-right: 8px; // Define margem entre os botões "Ver" e "Editar"
+                    text-decoration: none;
+                }
+
+                >.action-anchor {
+                    margin-right: 8px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #2196f3;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+
+            >.rightActions {
+                display: flex; // Cria um flex container para os botões à direita
+
+                >.action-icon {
+                    margin-left: 8px; // Define margem entre os ícones de coração e compartilhar
+                }
+
+                >.action-icon {
+                    margin-right: 8px;
+                    font-size: 18px;
+                    color: #616161;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+
+                    >.icon-favorito {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+    // * Dark mode
+    @if $useDarkMode {
+        @media (prefers-color-scheme: dark) {
+            background-color: #1c2831;
+
+            >.cardHeader {
+                >div {
+                    >.titulo {
+                        color:cornflowerblue;
+                    }
+                    >.subtitulo {
+                        color: lightcoral;
+                    }
+                }
+            }
+            >.cardContent {
+                >.supportingText {
+                    color: #b9babe;
+                }
+            }
+            >.cardActions {
+                >.leftActions {
+                    >.action-anchor {
+                        color: cornflowerblue;
+                    }
+                }
+                >.rightActions {
+                    >.action-icon {
+                        color: #616161;
+                        background-color: transparent;
+    
+                        >.icon-favorito {
+                            color: red;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}

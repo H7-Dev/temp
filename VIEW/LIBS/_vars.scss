@@ -1,0 +1,70 @@
+// * background color
+$bgColor: #FFF;
+$bgColorA: #F4F4F4;
+$bgColorB: #F8F8F8;
+// * background color dark mode
+$darkBgColor: #1B2632;
+$darkBgColorA: #222f3e;
+$darkBgColorB: #1c2831;
+$darkBgColorC: #121921;
+
+@mixin bgColor($bgColor: #ffffff, $darkBgColorA: #333333, $useDarkMode: true) {
+    background-color: $bgColor;
+
+    @if $useDarkMode {
+        @media (prefers-color-scheme: dark) {
+            background-color: $darkBgColorA;
+        }
+    }
+}
+
+
+// * text color
+$color: tomato;
+$colorA: #003d8c;
+$darkColor: goldenrod;
+$darkColorA: aquamarine;
+
+@mixin color($color: black, $darkColor: white, $useDarkMode: true) {
+    color: $color;
+
+    @if $useDarkMode {
+        @media (prefers-color-scheme: dark) {
+            color: $darkColor;
+        }
+    }
+}
+
+$fill : crimson;
+$fillA : #003C8C;
+$darkFill : goldenrod;
+
+@mixin fill($fill: black, $darkFill: white, $useDarkMode: true) {
+    fill: $fill;
+
+    @if $useDarkMode {
+        @media (prefers-color-scheme: dark) {
+            fill: $darkFill;
+        }
+    }
+}
+
+@mixin textOverflowMult($clamp: 4, $overflow: ellipsis) {
+    // !IMPORTANT - 
+    // REVIEW #L-001 -
+    // LINK (resovildo) https://stackoverflow.com/a/30940678/17352874
+    // Descrição: Text overflow ellipsis on two lines
+    display: -webkit-box;
+    // max-width: 400px;
+    -webkit-line-clamp: $clamp;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: $overflow;
+
+}
+@mixin textOverFlow(){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

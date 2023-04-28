@@ -1,0 +1,519 @@
+
+    @import './../../../LIBS/custom-scrollbar';
+    @import './../../../LIBS/vars';
+    @import './../../../LIBS/btnEstilos';
+    @import './../../../LIBS/inSearch';
+    @import './../../../LIBS/_ulOptions';
+    @import './../../../LIBS/cols&rows';
+
+
+@media (max-width: 768px) {
+ 
+    div.pagA {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        gap: 5px;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-rows: 0.1fr .1fr 1fr .1fr;
+        grid-template-columns: 1fr;
+
+        >* {
+            font-family: 'Segoe UI', monospace, sans-serif;
+
+            &::before,
+            &::after {
+                font-family: 'Segoe UI', monospace, sans-serif;
+            }
+        }
+
+        >div.header {
+            padding: 15px 15px;
+            display: grid;
+            gap: 5px;
+            grid-template-rows: 1fr auto;
+            grid-template-columns: 1fr auto;
+            height: fit-content;
+
+            >span.titulo {
+                @include cr($col: 1, $row: 1);
+                @include color($color, $darkColor, true);
+                font-size: 2.1rem;
+                align-items: flex-end;
+            }
+
+            >span.subtitulo {
+                @include cr($col: 1, $row: 2);
+                @include color($colorA, $darkColorA, true);
+                font-size: 1rem;
+                letter-spacing: normal;
+                font-weight: normal;
+            }
+
+            >button.btnShowAside {
+                display: grid;
+                >svg {
+                    height: 14pt;
+                    @include fill(#003c8c, crimson);
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        >nav {
+            padding: 15px;
+            display: grid;
+            gap: 14px;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr auto;
+            
+
+            grid-auto-flow: column;
+            align-content: center;
+            align-items: center;
+            justify-content: end;
+
+            >div.preFiltro {
+                @include cr($col: 1, $row: 1, $colEnd: 3);
+                // background: gainsboro;
+                padding: 4px 4px 0px 4px;
+                display: grid;
+                gap: 15px;
+                grid-auto-flow: column;
+                grid-template-columns: auto auto 1fr;
+                height: 100%;
+                width: 100%;
+                align-items: end;
+
+                >span.spTodos,
+                span.spFavoritos,
+                span.spRecentes {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    height: fit-content;
+                    border-bottom: 2px solid #0000;
+
+                    &.active-002 {
+
+                        @media (prefers-color-scheme: dark) {
+                            border-bottom: 2px solid $darkColor;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+
+                >span.spRecentes {
+                    display: none;
+                }
+            }
+            >label.in_serch {
+                @include inSearchA1($bgColor, #1e2b3a, true);
+            }
+        }
+
+        >div.main {
+            background-color: rgba(0, 0, 0, 0);
+            padding: 15px 15px 0 15px;
+            display: flex;
+            gap: 0 15px;
+            overflow: hidden;
+
+            >div.listviewBaralhos {
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: inherit;
+            }
+
+          
+            >form.filtros {
+                @include bgColor(#FAFAFA, #1c2831);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+                opacity: 1;
+                padding: 10px 20px;
+                max-height: 50%;
+                // 
+                display: none;
+                position: fixed;
+                bottom: -50%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                
+                >div.header {
+                    flex-basis: content;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    >button.btnOcultarFiltros {
+                        flex-basis: content;
+
+                        @include btnStyA1($bgColor, $darkBgColor, true);
+
+                        >svg {
+                            height: 14pt;
+                            @include fill(#003c8c, crimson);
+                            rotate: 272deg;
+                        }
+                    }
+
+                    >span {
+                        flex-basis: 100%;
+                        @include color($colorA, $darkColorA, true);
+                        font-size: 1rem;
+                        letter-spacing: normal;
+                        font-weight: normal;
+                        // alinhar o texto verticalmente
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+
+                    >button.btnFiltrosBar {
+                        flex-basis: content;
+                        @include btnStyA1($bgColor, $darkBgColor, true);
+
+                        >svg {
+                            height: 14pt;
+                            @include fill(#003c8c, crimson);
+                            rotate: 180deg;
+                        }
+                    }
+                }
+
+                >div.posHeader {
+                    flex-basis: content;
+                    flex-basis: content;
+                    display: flex;
+                    display: none; // não será necessário neste primeiro momento
+                    flex-wrap: wrap;
+                    gap: 4px;
+                    justify-content: space-around;
+
+                    >span.titulo {
+                        flex-basis: 50%;
+                        @include color(#003C8C);
+                        font-size: 0.85rem;
+                        letter-spacing: normal;
+                        font-weight: normal;
+
+                    }
+
+                    span.subtitulo {
+                        flex-basis: 50%;
+                        @include color(#003C8C);
+                        font-size: 0.85rem;
+                        text-align: end;
+                        letter-spacing: normal;
+                        font-weight: normal;
+                        cursor: default;
+                        max-width: fit-content;
+                        transition: transform 0.2s ease-in-out;
+                        border: 1px solid #0000;
+                        border-radius: 4px;
+                        padding: 1px;
+
+                        &:hover {
+                            @include bgColor(gainsboro);
+                            border: 1px solid rgba(0, 61, 140, 0.180);
+
+                        }
+
+                        &:active {
+                            @include bgColor(gainsboro);
+                            transform: scale(0.95);
+                        }
+
+                        &:focus {
+                            @include bgColor(gainsboro);
+                        }
+                    }
+
+                    >label.lbFilterMarcdor {
+                        flex-basis: calc(30% - 2px); // subtraindo a largura do border da div pai
+                        flex-grow: 1; // permitir que as labels deslizem
+                        @include bgColor(gainsboro);
+
+                        >input.inFilterMarcador {
+                            width: 80%;
+                        }
+
+                        >button.btnClose {}
+                    }
+
+                    // estilos dos inputs dentro dos labels
+
+
+                }
+
+                >div.main {
+                    flex-basis: 100%;
+                    display: flex;
+                    gap: 15px 0;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    overflow: scroll;
+                    padding: 0 10px;
+                    
+
+                    >label.customSelc {
+                        @include bgColor(#FAFAFA, #1e2b3a);
+                        padding: 4px;
+
+                        display: grid;
+                        grid-template-rows: auto auto;
+                        overflow: hidden;
+                        min-width: 160px;
+                        min-height: 60px;
+                        position: relative;
+                        border-radius: 4px;
+
+                        &.activeCustonSelc {
+                            >button.clearSelc {
+                                visibility: visible !important;
+                                opacity: 1 !important;
+                                transition: opacity 0.4s ease-in-out !important;
+
+                            }
+                        }
+
+
+                        >span.titulo {
+                            color: darkgray;
+                            font-size: 0.8rem;
+                            font-family: "monospace", "Segoe UI", sans-serif;
+                            letter-spacing: normal;
+                            font-weight: normal;
+                            text-align: left;
+                        }
+
+                        >button.btnOpts {
+                            @include bgColor(#00000005, #0000, $useDarkMode: true);
+
+                            @include color(#003d8c, brown);
+                            font-size: 0.95rem;
+                            font-family: "monospace", "Segoe UI", sans-serif;
+                            letter-spacing: normal;
+                            font-weight: normal;
+                            text-align: left;
+
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            // min-width: 120px;
+                            // padding: 10px 15px;
+                            border: 1px solid #0000;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            text-align: left;
+
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: 8px;
+                                transform: translateY(-50%);
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 5px 4px 0 4px;
+                                border-color: #000 transparent transparent transparent;
+                                transition: transform 0.2s ease-in-out;
+                            }
+
+                            &.active::after {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        >button.clearSelc {
+                            background-color: #0000;
+                            padding: 2px;
+                            display: grid;
+                            justify-items: center;
+                            align-items: center;
+                            align-content: center;
+                            justify-content: center;
+
+                            position: absolute;
+                            z-index: 1;
+                            top: 8%;
+                            right: 25px;
+                            visibility: hidden;
+
+                            outline: 1px solid #0000;
+                            border: 1px solid #0000;
+                            border-radius: 50%;
+
+                            opacity: 0;
+                            transition: opacity 0.4s ease-in-out,
+                                transform 0.4s ease-in-out;
+
+                            &:hover {
+                                color: red;
+
+                            }
+                        }
+                    }
+
+                    >ul.ulOptions {
+                        @include ulOptions();
+                        position:fixed;
+                        
+                    }
+
+                }
+
+                div.footer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: stretch;
+                    gap: 0 50%;
+                    padding: 6px 75px;
+
+                    button.btnClearFiltros {
+                        @include btnN001();
+                        border: 1px solid brown;
+
+                        >span {
+                            @include color(brown, brown, true);
+                            font-size: 0.75rem;
+                            letter-spacing: normal;
+                            font-weight: normal;
+                            text-align: center;
+                        }
+                    }
+
+                    button.btnAplicarFiltros {
+                        @include btnN001();
+                        border: 1px solid #003C8C;
+
+                        >span {
+                            @include color(#003C8C, cornflowerblue, true);
+                            font-size: 0.80rem;
+                            letter-spacing: normal;
+                            font-weight: normal;
+                            text-align: center;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            @include custom-scrollbar(true);
+
+            >&:hover {
+                @include custom-scrollbar(false);
+                @include custom-scrollbar(false, true);
+            }
+        }
+
+        >footer {
+            @include bgColor($bgColorA, #0000, true);
+            padding: 4px 10px;
+            height: fit-content;
+            display: grid;
+            gap: 0 15px;
+            grid-template-columns: min-content auto 1fr;
+            justify-items: center;
+
+            >div.infos {
+                // background-color: lightblue;
+                min-width: max-content;
+                display: grid;
+                // grid-template-columns: min-content ;
+
+                >span.titulo {
+                    color: #003d8c;
+                    @include color($colorA, $darkColorA, true);
+                    font-size: 1rem;
+                    align-self: center;
+                    //
+                    // text-align: left;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    cursor: default
+                }
+            }
+
+            >div.actions {
+                @include bgColor($bgColorA, $darkBgColorA, true);
+
+                margin: 0 0 0 15px;
+                padding: 6px 10px;
+                width: fit-content;
+                display: grid;
+                grid-auto-flow: column;
+                gap: 8px;
+                // grid-template-rows: 1fr;
+                // grid-template-columns: 1fr 1fr 1fr;
+                border-radius: 8px;
+
+                >button.btnAddRegistro,
+                >button.btnSelc,
+                >button.btnDel,
+                >button.btnUpdate {
+                    @include btnStyA1($bgColor, $darkBgColor, true);
+
+                    >svg {
+                        height: 14pt;
+                        fill: crimson;
+                        fill: #003c8c;
+
+                        @media (prefers-color-scheme: dark) {
+                            fill: crimson;
+                        }
+
+                    }
+                }
+
+                >button.btnDel {
+                    display: none;
+
+                    >svg {
+                        height: 14pt;
+                        fill: crimson;
+                        // fill: #003c8c;
+                    }
+                }
+
+                >button.btnUpdate {
+                    display: none;
+
+                    >svg {
+                        height: 14pt;
+                        fill: crimson;
+                        // fill: #003c8c;
+                        fill: goldenrod;
+
+                    }
+                }
+            }
+
+        }
+
+        >div.footer {
+            background-color: #fff;
+        }
+    }
+
+}

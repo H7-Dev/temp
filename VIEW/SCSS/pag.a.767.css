@@ -1,0 +1,1414 @@
+@media (max-width: 768px) {
+  div.pagA {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+    grid-template-columns: 1fr;
+  }
+  div.pagA > * {
+    font-family: "Segoe UI", monospace, sans-serif;
+  }
+  div.pagA > *::before, div.pagA > *::after {
+    font-family: "Segoe UI", monospace, sans-serif;
+  }
+  div.pagA > div.header {
+    padding: 15px 15px;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  div.pagA > div.header > span.titulo {
+    grid-row-start: 1;
+    grid-row-end: "";
+    grid-column-start: 1;
+    grid-column-end: "";
+    color: tomato;
+    font-size: 2.1rem;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  div.pagA > div.header > span.titulo {
+    grid-row-start: 1;
+    grid-row-end: "";
+    grid-column-start: 1;
+    grid-column-end: "";
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.header > span.titulo {
+    color: goldenrod;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.header > span.subtitulo {
+    grid-row-start: 2;
+    grid-row-end: "";
+    grid-column-start: 1;
+    grid-column-end: "";
+    color: #003d8c;
+    font-size: 1rem;
+    letter-spacing: normal;
+    font-weight: normal;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  div.pagA > div.header > span.subtitulo {
+    grid-row-start: 2;
+    grid-row-end: "";
+    grid-column-start: 1;
+    grid-column-end: "";
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.header > span.subtitulo {
+    color: aquamarine;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.header > button.btnShowAside {
+    display: grid;
+  }
+  div.pagA > div.header > button.btnShowAside > svg {
+    height: 14pt;
+    fill: #003c8c;
+    rotate: 180deg;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.header > button.btnShowAside > svg {
+    fill: crimson;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > nav {
+    padding: 15px 0 0 15px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: auto 1fr;
+    grid-auto-flow: column;
+    align-content: center;
+    align-items: center;
+    justify-content: end;
+  }
+  div.pagA > nav > div.preFiltro {
+    padding: 4px 4px 0px 4px;
+    display: grid;
+    gap: 15px;
+    grid-auto-flow: column;
+    height: 100%;
+    width: 100%;
+    align-items: end;
+  }
+  div.pagA > nav > div.preFiltro > span.spTodos,
+  div.pagA > nav > div.preFiltro span.spFavoritos,
+  div.pagA > nav > div.preFiltro span.spRecentes {
+    color: #003d8c;
+    font-size: 1rem;
+    font-weight: 500;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.preFiltro > span.spTodos,
+  div.pagA > nav > div.preFiltro span.spFavoritos,
+  div.pagA > nav > div.preFiltro span.spRecentes {
+    color: tomato;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > nav > div.preFiltro > span.spTodos.active-002,
+  div.pagA > nav > div.preFiltro span.spFavoritos.active-002,
+  div.pagA > nav > div.preFiltro span.spRecentes.active-002 {
+    border-bottom: 2px solid tomato;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.preFiltro > span.spTodos.active-002,
+  div.pagA > nav > div.preFiltro span.spFavoritos.active-002,
+  div.pagA > nav > div.preFiltro span.spRecentes.active-002 {
+    border-bottom: 2px solid goldenrod;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > nav > div.preFiltro > span.spTodos:hover,
+  div.pagA > nav > div.preFiltro span.spFavoritos:hover,
+  div.pagA > nav > div.preFiltro span.spRecentes:hover {
+    cursor: default;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > nav > div.preFiltro > span.spRecentes {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > nav > div.filtroBar {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 0.8fr auto;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch {
+    background-color: #FFF;
+    padding: 4px 6px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:hover {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:active {
+    border: 1px solid rgba(0, 61, 140, 0.04);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:focus-within {
+    border: 1px solid rgba(0, 61, 140, 0.05);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 4px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 61, 140, 0);
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button:hover {
+    background-color: rgba(0, 60, 140, 0.05);
+    border: 1px solid rgba(0, 61, 140, 0.2);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button:focus {
+    background-color: rgba(0, 60, 140, 0.05);
+    border: 1px solid rgba(0, 61, 140, 0.2);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button:active {
+    background-color: rgba(0, 60, 140, 0.05);
+    border: 1px solid rgba(0, 61, 140, 0.2);
+    transform: scale(0.92);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button > svg {
+    fill: #003c8c;
+    height: 12pt;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input {
+    font-size: 0.8rem;
+    font-family: "OpenSansSemiBold", "Segoe UI", sans-serif;
+    color: #003c8c;
+    background-color: transparent;
+    padding: 0.2rem 0.1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 0.8rem;
+    font-family: "Open Sans Regular", "Segoe UI", sans-serif;
+    color: #b9babe;
+    opacity: 1;
+    /* Firefox */
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 0.8rem;
+    font-family: "Open Sans Regular", "Segoe UI", sans-serif;
+    color: #b9babe;
+    opacity: 1;
+    /* Firefox */
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.filtroBar > label.in_serch > input::-moz-placeholder {
+    color: #b9babe;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input::placeholder {
+    color: #b9babe;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.filtroBar > label.in_serch {
+    background-color: #1e2b3a;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:hover {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:active {
+    border: 1px solid rgba(0, 61, 140, 0.04);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch:focus-within {
+    border: 1px solid rgba(0, 61, 140, 0.05);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 4px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button:active {
+    transform: scale(0.9);
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > button > svg {
+    fill: aquamarine;
+    height: 12pt;
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input {
+    color: #003c8c;
+    background-color: transparent;
+    padding: 0.2rem 0.1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.filtroBar > label.in_serch > input {
+    color: bisque;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > nav > div.filtroBar > label.in_serch > input::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 0.8rem;
+    font-family: "Open Sans Regular", "Segoe UI", sans-serif;
+    color: #b9babe;
+    opacity: 1;
+    /* Firefox */
+  }
+  div.pagA > nav > div.filtroBar > label.in_serch > input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 0.8rem;
+    font-family: "Open Sans Regular", "Segoe UI", sans-serif;
+    color: #b9babe;
+    opacity: 1;
+    /* Firefox */
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 15px 15px 0 15px;
+    display: flex;
+    gap: 0 15px;
+    overflow: hidden;
+    /* Estilos da barra de rolagem */
+  }
+  div.pagA > div.main > div.listviewBaralhos {
+    flex-basis: 100%;
+  }
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos {
+    background-color: #FAFAFA;
+    margin: 10px;
+    display: flex;
+    text-decoration: none;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos {
+    background-color: #1E2B3A;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos > div.itens {
+    margin: 5px;
+    display: grid;
+    gap: 5px;
+    flex-basis: 25%;
+  }
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos > div.itens > span.titulo {
+    color: darkgray;
+    font-size: 0.8rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos > div.itens > span.titulo {
+    color: darkgray;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos > div.itens > span.subtitulo {
+    color: #003C8C;
+    font-size: 0.8rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > div.listviewBaralhos > .anBaralhos > div.itens > span.subtitulo {
+    color: darkgoldenrod;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  div.pagA > div.main > form.filtros > div.header {
+    flex-basis: content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros {
+    flex-basis: content;
+    background-color: #FFF;
+    padding: 6px 8px;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: grid;
+    align-items: center;
+    align-self: center;
+    white-space: nowrap;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:hover {
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 61, 140, 0.18);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:active {
+    background-color: #f5f5f5;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:focus {
+    background-color: #f8f8f8;
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros {
+    background-color: #1B2632;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:hover {
+    background-color: #121921;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:active {
+    background-color: #121921;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros:focus {
+    background-color: #121921;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros > svg {
+    height: 14pt;
+    fill: #003c8c;
+    rotate: 180deg;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.header > button.btnOcultarFiltros > svg {
+    fill: crimson;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.header > span {
+    flex-basis: 100%;
+    color: #003d8c;
+    font-size: 1rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.header > span {
+    color: aquamarine;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar {
+    flex-basis: content;
+    background-color: #FFF;
+    padding: 6px 8px;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: grid;
+    align-items: center;
+    align-self: center;
+    white-space: nowrap;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:hover {
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 61, 140, 0.18);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:active {
+    background-color: #f5f5f5;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:focus {
+    background-color: #f8f8f8;
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar {
+    background-color: #1B2632;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:hover {
+    background-color: #121921;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:active {
+    background-color: #121921;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar:focus {
+    background-color: #121921;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar > svg {
+    height: 14pt;
+    fill: #003c8c;
+    rotate: 180deg;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.header > button.btnFiltrosBar > svg {
+    fill: crimson;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader {
+    flex-basis: content;
+    flex-basis: content;
+    display: flex;
+    display: none;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: space-around;
+  }
+  div.pagA > div.main > form.filtros > div.posHeader > span.titulo {
+    flex-basis: 50%;
+    color: #003C8C;
+    font-size: 0.85rem;
+    letter-spacing: normal;
+    font-weight: normal;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader > span.titulo {
+    color: white;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo {
+    flex-basis: 50%;
+    color: #003C8C;
+    font-size: 0.85rem;
+    text-align: end;
+    letter-spacing: normal;
+    font-weight: normal;
+    cursor: default;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    padding: 1px;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo {
+    color: white;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:hover {
+    background-color: gainsboro;
+    border: 1px solid rgba(0, 61, 140, 0.18);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:hover {
+    background-color: #333333;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:active {
+    background-color: gainsboro;
+    transform: scale(0.95);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:active {
+    background-color: #333333;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:focus {
+    background-color: gainsboro;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader span.subtitulo:focus {
+    background-color: #333333;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader > label.lbFilterMarcdor {
+    flex-basis: calc(30% - 2px);
+    flex-grow: 1;
+    background-color: gainsboro;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.posHeader > label.lbFilterMarcdor {
+    background-color: #333333;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.posHeader > label.lbFilterMarcdor > input.inFilterMarcador {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main {
+    flex-basis: 100%;
+    display: flex;
+    gap: 15px 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  div.pagA > div.main > form.filtros > div.main > label.customSelc {
+    background-color: #FAFAFA;
+    padding: 4px;
+    display: grid;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+    min-width: 160px;
+    position: relative;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc {
+    background-color: #1e2b3a;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc.activeCustonSelc > button.clearSelc {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: opacity 0.4s ease-in-out !important;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > span.titulo {
+    color: darkgray;
+    font-size: 0.8rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts {
+    background-color: rgba(0, 0, 0, 0.0196078431);
+    color: #003d8c;
+    font-size: 0.95rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts {
+    color: brown;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #000 transparent transparent transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts.active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.btnOpts:focus {
+    outline: none;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.clearSelc {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: -10%;
+    right: 25px;
+    visibility: hidden;
+    outline: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.main > label.customSelc > button.clearSelc:hover {
+    color: red;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions {
+    background-color: #FAFAFA;
+    margin-bottom: 10px;
+    max-height: 0px;
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 5px);
+    left: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-top: none;
+    opacity: 0;
+    transform: scaleY(0.2);
+    transform-origin: top;
+    overflow: auto;
+    color: #003d8c;
+    font-size: 0.95rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, max-height 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ddd transparent;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar {
+    width: 10px;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar-thumb {
+    background-color: rgba(147, 147, 147, 0.3294117647);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 61, 140, 0.2745098039);
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions.show {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 260px;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li {
+    padding: 10px;
+    transform: scaleY(1);
+    transform-origin: top;
+    cursor: default;
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li:first-child {
+    transform-origin: center top;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li:last-child {
+    transform-origin: bottom top;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions {
+    background-color: #121921;
+    margin-bottom: 10px;
+    max-height: 0px;
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 5px);
+    left: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-top: none;
+    opacity: 0;
+    transform: scaleY(0.2);
+    transform-origin: top;
+    overflow: auto;
+    color: crimson;
+    font-size: 0.95rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, max-height 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ddd transparent;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar {
+    width: 10px;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions::-webkit-scrollbar-thumb {
+    background-color: rgba(147, 147, 147, 0.3294117647);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 61, 140, 0.2745098039);
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions.show {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 260px;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li {
+    padding: 10px;
+    transform: scaleY(1);
+    transform-origin: top;
+    cursor: default;
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li:first-child {
+    transform-origin: center top;
+  }
+  div.pagA > div.main > form.filtros > div.main > ul.ulOptions li:last-child {
+    transform-origin: bottom top;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros div.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    padding: 6px 75px;
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros {
+    background-color: #f8f8f8;
+    padding: 6px 8px;
+    display: grid;
+    white-space: nowrap;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid brown;
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:hover {
+    background-color: #f8f8f8;
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:active {
+    background-color: #f5f5f5;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:focus {
+    background-color: #f8f8f8;
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros {
+    background-color: #1B2632;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:hover {
+    background-color: #121921;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:active {
+    background-color: #121921;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros:focus {
+    background-color: #121921;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros > span {
+    color: brown;
+    font-size: 0.75rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros div.footer button.btnClearFiltros > span {
+    color: brown;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros {
+    background-color: #f8f8f8;
+    padding: 6px 8px;
+    display: grid;
+    white-space: nowrap;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #003C8C;
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:hover {
+    background-color: #f8f8f8;
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:active {
+    background-color: #f5f5f5;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:focus {
+    background-color: #f8f8f8;
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros {
+    background-color: #1B2632;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:hover {
+    background-color: #121921;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:active {
+    background-color: #121921;
+    transform: scale(0.95);
+  }
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros:focus {
+    background-color: #121921;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros > span {
+    color: #003C8C;
+    font-size: 0.8rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main > form.filtros div.footer button.btnAplicarFiltros > span {
+    color: cornflowerblue;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f2f2f2;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:active {
+    background-color: #888;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:hover {
+    background-color: #f5f5f5;
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:active {
+    background-color: #eee;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main {
+    /* Estilos da barra de rolagem */
+  }
+  div.pagA > div.main::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb {
+    background-color: #1c2831;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:hover {
+    background-color: #1c2831;
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:active {
+    background-color: 121921;
+  }
+  div.pagA > div.main::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main::-webkit-scrollbar-track:active {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main:hover {
+    /* Estilos da barra de rolagem */
+    /* Estilos da barra de rolagem */
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f2f2f2;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:active {
+    background-color: #888;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:hover {
+    background-color: #f5f5f5;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:active {
+    background-color: #eee;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main:hover {
+    /* Estilos da barra de rolagem */
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb {
+    background-color: #1c2831;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #1c2831;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:active {
+    background-color: 121921;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main:hover::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f2f2f2;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:active {
+    background-color: #888;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.main:hover::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:hover {
+    background-color: #f5f5f5;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:active {
+    background-color: #eee;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > div.main:hover {
+    /* Estilos da barra de rolagem */
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb {
+    background-color: #1c2831;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #1c2831;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-thumb:active {
+    background-color: 121921;
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  div.pagA > div.main:hover::-webkit-scrollbar-track:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer {
+    background-color: #F4F4F4;
+    padding: 4px 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: grid;
+    gap: 0 15px;
+    grid-template-columns: min-content auto 1fr;
+    justify-items: center;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > footer {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.infos {
+    min-width: -moz-max-content;
+    min-width: max-content;
+    display: grid;
+  }
+  div.pagA > footer > div.infos > span.titulo {
+    color: #003d8c;
+    color: #003d8c;
+    font-size: 1rem;
+    align-self: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: default;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > footer > div.infos > span.titulo {
+    color: aquamarine;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.actions {
+    background-color: #F4F4F4;
+    margin: 0 0 0 15px;
+    padding: 6px 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > footer > div.actions {
+    background-color: #222f3e;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.actions > button.btnAddRegistro,
+  div.pagA > footer > div.actions > button.btnSelc,
+  div.pagA > footer > div.actions > button.btnDel,
+  div.pagA > footer > div.actions > button.btnUpdate {
+    background-color: #FFF;
+    padding: 6px 8px;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: grid;
+    align-items: center;
+    align-self: center;
+    white-space: nowrap;
+    outline: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+    transition: transform 0.2s ease-in-out;
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:hover,
+  div.pagA > footer > div.actions > button.btnSelc:hover,
+  div.pagA > footer > div.actions > button.btnDel:hover,
+  div.pagA > footer > div.actions > button.btnUpdate:hover {
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 61, 140, 0.18);
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:active,
+  div.pagA > footer > div.actions > button.btnSelc:active,
+  div.pagA > footer > div.actions > button.btnDel:active,
+  div.pagA > footer > div.actions > button.btnUpdate:active {
+    background-color: #f5f5f5;
+    transform: scale(0.95);
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:focus,
+  div.pagA > footer > div.actions > button.btnSelc:focus,
+  div.pagA > footer > div.actions > button.btnDel:focus,
+  div.pagA > footer > div.actions > button.btnUpdate:focus {
+    background-color: #f8f8f8;
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > footer > div.actions > button.btnAddRegistro,
+  div.pagA > footer > div.actions > button.btnSelc,
+  div.pagA > footer > div.actions > button.btnDel,
+  div.pagA > footer > div.actions > button.btnUpdate {
+    background-color: #1B2632;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 3px 0px rgba(0, 60, 140, 0.15);
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:hover,
+  div.pagA > footer > div.actions > button.btnSelc:hover,
+  div.pagA > footer > div.actions > button.btnDel:hover,
+  div.pagA > footer > div.actions > button.btnUpdate:hover {
+    background-color: #121921;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:active,
+  div.pagA > footer > div.actions > button.btnSelc:active,
+  div.pagA > footer > div.actions > button.btnDel:active,
+  div.pagA > footer > div.actions > button.btnUpdate:active {
+    background-color: #121921;
+    transform: scale(0.95);
+  }
+  div.pagA > footer > div.actions > button.btnAddRegistro:focus,
+  div.pagA > footer > div.actions > button.btnSelc:focus,
+  div.pagA > footer > div.actions > button.btnDel:focus,
+  div.pagA > footer > div.actions > button.btnUpdate:focus {
+    background-color: #121921;
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.15);
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.actions > button.btnAddRegistro > svg,
+  div.pagA > footer > div.actions > button.btnSelc > svg,
+  div.pagA > footer > div.actions > button.btnDel > svg,
+  div.pagA > footer > div.actions > button.btnUpdate > svg {
+    height: 14pt;
+    fill: crimson;
+    fill: #003c8c;
+  }
+}
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  div.pagA > footer > div.actions > button.btnAddRegistro > svg,
+  div.pagA > footer > div.actions > button.btnSelc > svg,
+  div.pagA > footer > div.actions > button.btnDel > svg,
+  div.pagA > footer > div.actions > button.btnUpdate > svg {
+    fill: crimson;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.actions > button.btnDel {
+    display: none;
+  }
+  div.pagA > footer > div.actions > button.btnDel > svg {
+    height: 14pt;
+    fill: crimson;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > footer > div.actions > button.btnUpdate {
+    display: none;
+  }
+  div.pagA > footer > div.actions > button.btnUpdate > svg {
+    height: 14pt;
+    fill: crimson;
+    fill: goldenrod;
+  }
+}
+@media (max-width: 768px) {
+  div.pagA > div.footer {
+    background-color: #fff;
+  }
+}/*# sourceMappingURL=pag.a.767.css.map */

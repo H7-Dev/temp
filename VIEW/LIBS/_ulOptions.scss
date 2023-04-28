@@ -1,0 +1,150 @@
+@mixin ulOptions($useDarkMode: true) {
+    background-color: #FAFAFA;
+    margin-bottom: 10px; // adiciona uma margem inferior para separar do conteúdo abaixo
+    max-height: 260px;
+
+
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 5px);
+    left: 0;
+    list-style: none;
+
+    border: 1px solid #ddd;
+    border-top: none;
+    opacity: 0;
+    transform: scaleY(0.2);
+    transform-origin: top;
+    overflow: auto;
+
+    color: #003d8c;
+    font-size: 0.95rem;
+    font-family: "monospace", "Segoe UI", sans-serif;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10px; // posiciona acima do ul
+        left: 10px; // posiciona no canto esquerdo
+        border-style: solid;
+        border-width: 0 10px 10px 10px; // cria um triângulo com borda
+        border-color: transparent transparent #ddd transparent; // cor da borda
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #93939354;
+        border-radius: 8px;
+        border: 1px solid #003d8c46;
+    }
+
+    transition: opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out,
+    max-height 0.2s ease-in-out;
+
+    &.show {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    li {
+        padding: 10px;
+        transform: scaleY(1);
+        transform-origin: top;
+        cursor: default;
+
+        transition: transform 0.2s ease-in-out;
+
+        &:first-child {
+            transform-origin: center top;
+        }
+
+        &:last-child {
+            transform-origin: bottom top;
+        }
+    }
+
+    @if $useDarkMode {
+        @media (prefers-color-scheme: dark) {
+            background-color: #121921;
+            margin-bottom: 10px; // adiciona uma margem inferior para separar do conteúdo abaixo
+            max-height: 0px;
+        
+            // position: absolute;
+            z-index: 1000;
+            top: calc(100% + 5px);
+            left: 0;
+            list-style: none;
+        
+            border: 1px solid #ddd;
+            border-top: none;
+            opacity: 0;
+            transform: scaleY(0.2);
+            transform-origin: top;
+            overflow: auto;
+        
+            color: crimson;
+            font-size: 0.95rem;
+            font-family: "monospace", "Segoe UI", sans-serif;
+        
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10px; // posiciona acima do ul
+                left: 10px; // posiciona no canto esquerdo
+                border-style: solid;
+                border-width: 0 10px 10px 10px; // cria um triângulo com borda
+                border-color: transparent transparent #ddd transparent; // cor da borda
+            }
+        
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+        
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background-color: #93939354;
+                border-radius: 8px;
+                border: 1px solid #003d8c46;
+            }
+        
+            transition: opacity 0.2s ease-in-out,
+            transform 0.2s ease-in-out,
+            max-height 0.2s ease-in-out;
+        
+            &.show {
+                opacity: 1;
+                transform: scaleY(1);
+                max-height: 260px;
+            }
+        
+            li {
+                padding: 10px;
+                transform: scaleY(1);
+                transform-origin: top;
+                cursor: default;
+        
+                transition: transform 0.2s ease-in-out;
+        
+                &:first-child {
+                    transform-origin: center top;
+                }
+        
+                &:last-child {
+                    transform-origin: bottom top;
+                }
+            }
+        
+        }
+    }
+}
