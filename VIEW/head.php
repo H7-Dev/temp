@@ -6,9 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD-MVC-PHP</title>
-    <script src="./VIEW/JS/ajax.js"></script>
 
-    <link rel="stylesheet" href="./VIEW/SCSS/style.css">
     <!-- <link rel="stylesheet" href="PUBLIC/SCSS/leiaute.css"> -->
 
     <!-- <link rel="stylesheet" href="PUBLIC/SCSS/aside.css"> -->
