@@ -9,7 +9,8 @@
         <label>Termo 2:</label>        
         <input id="termo2"/><br>
         <button onclick="processa()">Processa</button><br>
-        <div id="resposta">
+        <div id="xresposta">
             ...
+            <h1 id="resposta">resposta</h1>
         </div>
 </body>
