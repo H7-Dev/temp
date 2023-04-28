@@ -5,6 +5,6 @@
     <?php // include("./pag.a.php"); ?>
     <h3>Requisições AJAX com JavaScript</h3>
 
-    <button class="btnEnviar" data="Valor do atributo do button">Processa</button><br>
+    <button class="btnTesteXMLHttpRequest" data="Valor dentro atributo DATA do button">Btn Testar XMLHttpRequest</button><br>
     <script src="./VIEW/JS/ajax.js"></script>
 </body>
