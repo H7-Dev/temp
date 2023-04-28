@@ -3,7 +3,7 @@ const button = document.querySelector('.btnEnviar');
 // adiciona um evento de clique no botão
 button.addEventListener('click', function () {
     // pega o valor do atributo "data-value" do botão
-    const value = button.getAttribute('data-value');
+    const value = button.getAttribute('data');
     // cria a requisição
     const xhr = new XMLHttpRequest();
     // define o método e o arquivo PHP que irá processar a requisição
