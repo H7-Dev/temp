@@ -5,6 +5,6 @@ function processa() {
     xhttp.onload = function() {
         document.getElementById("resposta").innerHTML = this.responseText;
     }
-    xhttp.open("GET", "../MODEL/processa.php?t1="+t1+"&t2="+t2);
+    xhttp.open("GET", "./MODEL/processa.php?t1="+t1+"&t2="+t2);
     xhttp.send();    
 }      

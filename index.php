@@ -1,4 +1,12 @@
-<html lang="pt-br">
+
+<?php include("./VIEW/head.php"); ?>
+<?php include("./VIEW/body.php"); ?>
+<?php include("./VIEW/footer.php"); ?>
+    
+    
+
+
+<!-- <html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <title>AJAX com JS</title>
@@ -17,4 +25,4 @@
         </div>
     </body>
 </html>
-
+ -->
