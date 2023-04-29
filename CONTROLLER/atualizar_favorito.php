@@ -29,9 +29,9 @@
             try {
                 $resultado = $this->baralhosDAO->atualizarCampoFavorito($novoValor, $idBar);
                 if ($resultado) {
-                    $html = '<div class="alert alert-success" role="alert">xFavorito atualizado com sucesso.</div>';
+                    $html = '<div class="alert alert-success" role="alert">YYY - Favorito atualizado com sucesso.</div>';
                 } else {
-                    $html = '<div class="alert alert-danger" role="alert">Erro ao atualizar favorito.</div>';
+                    $html = '<div class="alert alert-danger" role="alert">XXX - Erro ao atualizar favorito.</div>';
                 }
                 echo json_encode(['success' => true, 'html' => $html], JSON_UNESCAPED_UNICODE);
                 return; 
