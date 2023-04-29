@@ -24,7 +24,7 @@ class ListarBaralhoController {
                     echo "
                     <div class='card'>
                         <div class='cardMedia'>
-                            <img src='' alt='img'>
+                            <img src='https://via.placeholder.com/300x150/FAFAFA/CCC?text=Imagem Exemplo %20%0A 300x150' alt='img'>
                             <input type='checkbox' class='in_checkBox' idBar='{$tb_baralho['idBar']}'>
                         </div>
                         <div class='cardHeader'>

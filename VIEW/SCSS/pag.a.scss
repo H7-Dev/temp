@@ -1,16 +1,10 @@
-// @import './../../../VIEWS/PUBLIC/LIBS/custom-scrollbar';
-// @import './../../../VIEWS/PUBLIC/LIBS/vars';
-// @import './../../../VIEWS/PUBLIC/LIBS/btnEstilos';
-// @import './../../../VIEWS/PUBLIC/LIBS/inSearch';
-
-@import './../../../LIBS/custom-scrollbar';
-@import './../../../LIBS/vars';
-@import './../../../LIBS/btnEstilos';
-@import './../../../LIBS/inSearch';
-@import './../../../LIBS/_ulOptions';
-@import './../../../LIBS/cols&rows';
-@import './../../../LIBS/card';
-
+@import './../LIBS/custom-scrollbar';
+@import './../LIBS/vars';
+@import './../LIBS/btnEstilos';
+@import './../LIBS/inSearch';
+@import './../LIBS/_ulOptions';
+@import './../LIBS/cols&rows';
+@import './../LIBS/card';
 
 div.pagA {
     @include bgColor($bgColorA, $darkBgColorA, true);
