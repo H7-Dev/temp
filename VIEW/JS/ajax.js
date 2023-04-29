@@ -18,6 +18,19 @@ document.querySelectorAll('.btnFavorito').forEach(function(button) {
         
         // Atualizar a classe do ícone no botão
         button.querySelector('i').classList.toggle('icon-favorito');
+
+       // Exibir o conteúdo HTML retornado pelo servidor
+  var response = JSON.parse(xhr.responseText);
+  if (response.success) {
+    var html = response.html;
+
+    // Criar um novo elemento div e definir o seu conteúdo HTML
+    var div = document.createElement('div');
+    div.innerHTML = html;
+
+    // Inserir o novo elemento como um filho do elemento body
+    document.body.appendChild(div);
+  }
       } else {
         console.log('Erro ao atualizar registro');
       }

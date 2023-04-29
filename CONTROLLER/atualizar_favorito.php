@@ -28,17 +28,19 @@
             // Execução da atualização
             try {
                 $resultado = $this->baralhosDAO->atualizarCampoFavorito($novoValor, $idBar);
-                if ($resultado) { // se o método baralhosDAO->atualizarCampoFavorito retorna true
-                    echo json_encode(['success' => true, 'message' => 'Favorito atualizado com sucesso.'], JSON_UNESCAPED_UNICODE);
-                } else { // se o método baralhosDAO->atualizarCampoFavorito retorna false
-                    echo json_encode(['success' => false, 'message' => 'Erro ao atualizar favorito.'], JSON_UNESCAPED_UNICODE);
+                if ($resultado) {
+                    $html = '<div class="alert alert-success" role="alert">xFavorito atualizado com sucesso.</div>';
+                } else {
+                    $html = '<div class="alert alert-danger" role="alert">Erro ao atualizar favorito.</div>';
                 }
-                return;
+                echo json_encode(['success' => true, 'html' => $html], JSON_UNESCAPED_UNICODE);
+                return; 
             } catch (Exception $e) {
                 echo json_encode(['success' => false, 'message' => 'Erro ao atualizar favorito: ' . $e->getMessage()], JSON_UNESCAPED_UNICODE);
                 return ;
             }
         }
+        
         
     }
     
