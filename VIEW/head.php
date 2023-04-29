@@ -1,4 +1,3 @@
-<?php  require_once("./CONTROLLER/c.listar.livros.php");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

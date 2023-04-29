@@ -29,8 +29,12 @@
         </button>
     </nav>
     <div class="main  col1">
+
         <div class="listviewBaralhos">
-            <?php  new ListarBaralhoController();  ?>
+            <?php  
+                require_once("./CONTROLLER/c.listar.livros.php");
+                new ListarBaralhoController();  
+            ?>
        </div>
         <form class="filtros" >
             <div class="header">
