@@ -1,7 +1,7 @@
 
-<?php include("./VIEW/head.php"); ?>
-<?php include("./VIEW/body.php"); ?>
-<?php include("./VIEW/footer.php"); ?>
+<?php include("./head.php"); ?>
+<?php include("./body.php"); ?>
+<?php include("./footer.php"); ?>
     
     
 

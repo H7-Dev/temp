@@ -1,6 +1,6 @@
 <?php
 // require_once("./../MODEL/banco.php");
-require_once("./init.php");
+require_once("../init.php");
 class baralhosDAO {
     protected $mysqli;
     public function __construct() {
@@ -9,12 +9,20 @@ class baralhosDAO {
     private function conexao() {
         $this->mysqli = new mysqli(BD_SERVIDOR, BD_USUARIO , BD_SENHA, BD_BANCO);
     }
-    public function atualizarFavorito($idBar, $novoValor) {
-        $query = "UPDATE tb_baralhos SET c_fav = :novoValor WHERE idBar = :idBar";
-        $stmt = $this->pdo->prepare($query);
-        $stmt->bindParam(":novoValor", $novoValor, PDO::PARAM_INT);
-        $stmt->bindParam(":idBar", $idBar, PDO::PARAM_INT);
-        $stmt->execute();
+    public function atualizarFavorito($c_fav, $idBar) {
+        $stmt = $this->mysqli->prepare(
+            "UPDATE `tb_baralhos` 
+            SET 
+              `c_fav` = ?
+            WHERE 
+            `idBar` = ?"
+          );
+        $stmt->bind_param("ss",$c_fav,$idBar);
+        if($stmt->execute()==TRUE){
+            return true;
+        }else{
+            return false;
+        }
     }
     public function getBaralhos() {
         $result = $this->mysqli->query("SELECT * FROM tb_baralhos ORDER BY CAST(idBar AS UNSIGNED)");

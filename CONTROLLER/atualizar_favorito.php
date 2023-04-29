@@ -1,13 +1,32 @@
-<?php
+    <?php
+    require_once("../model/dao.baralhos.php");
 
-require_once("../MODEL/dao.baralhos.php");
 
-if (isset($_POST['idBar']) && isset($_POST['fav'])) {
-  $idBar = $_POST['idBar'];
-  $fav = $_POST['fav'];
+    class FavoritoController {
 
-  $dao = new baralhosDAO();
-  $dao->atualizarFavorito($idBar, $fav);
-}
+        private $baralhosDAO;
+    
+        public function __construct() {
+            $this->baralhosDAO = new BaralhosDAO();
+        }
+    
+        public function atualizarFavorito($dados) {
+            try {
+                $this->baralhosDAO->atualizarFavorito($dados['idBar'], $dados['novoValor']);
+                echo json_encode(['success' => true, 'message' => 'Favorito atualizado com sucesso.']);
+            } catch (Exception $e) {
+                echo json_encode(['success' => false, 'message' => 'Erro ao atualizar favorito: ' . $e->getMessage()]);
+            }
+        }
+    
+    }
 
-?>
+    $dados = [
+        'idBar' => 2,
+        'novoValor' => 1
+    ];
+    
+    $favoritoController = new FavoritoController();
+    $favoritoController->atualizarFavorito($dados);
+
+    ?>

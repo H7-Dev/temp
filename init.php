@@ -6,3 +6,4 @@ define('BD_USUARIO','root');
 define('BD_SENHA','');
 define('BD_BANCO','db_flashCardBar');
 
+?>

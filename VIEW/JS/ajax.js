@@ -10,7 +10,8 @@ btnFavorito.forEach((btn) => {
 
     // Envia uma solicitação AJAX para atualizar o valor de "c_fav" no banco de dados
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'CONTROLLER/atualizar_favorito.php', true);
+    // xhr.open('POST', 'CONTROLLER/atualizar_favorito.php', true);
+    xhr.open('POST', './CONTROLLER/atualizar_favorito.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {

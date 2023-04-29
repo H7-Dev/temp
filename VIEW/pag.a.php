@@ -32,7 +32,7 @@
 
         <div class="listviewBaralhos">
             <?php  
-                require_once("./CONTROLLER/c.listar.livros.php");
+                require_once("../CONTROLLER/c.listar.livros.php");
                 new ListarBaralhoController();  
             ?>
        </div>

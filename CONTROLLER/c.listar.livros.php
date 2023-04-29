@@ -1,6 +1,6 @@
 <?php
 
-require_once("./MODEL/dao.baralhos.php");
+require_once("../MODEL/dao.baralhos.php");
 
 class ListarBaralhoController {
     private $livrosDAO;
